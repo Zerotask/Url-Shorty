@@ -26,14 +26,8 @@ namespace UrlShorty.Services
             _db = connection.GetDatabase();
         }
 
-        public bool Set(string key, string value)
-        {
-            return _db.StringSet(key, value);
-        }
+        public bool Set(string key, string value) => _db.StringSet(key, value);
 
-        public string Get(string key)
-        {
-            return _db.StringGet(key);
-        }
+        public string Get(string key) => _db.StringGet(key);
     }
 }
