@@ -45,6 +45,7 @@ namespace UrlShorty.Controllers
         /// <param name="shortUrl"></param>
         /// <returns></returns>
         [HttpGet("{shortUrl:minlength(1)}")]
+        [ResponseCache(Duration = 600)]
         public IActionResult GetLongUrl(string shortUrl)
         {
             var longUrl = _redisService.Get(shortUrl);
