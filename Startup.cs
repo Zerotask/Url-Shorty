@@ -27,6 +27,7 @@ namespace UrlShorty
             });
             services.AddSingleton<IRedisService, RedisService>();
             services.AddSingleton<IShortenerService, ShortenerService>();
+            services.AddResponseCaching();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,6 +43,8 @@ namespace UrlShorty
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseResponseCaching();
 
             app.UseEndpoints(endpoints =>
             {
