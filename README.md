@@ -1,0 +1,1 @@
+﻿![Build](https://github.com/Zerotask/Url-Shorty/workflows/Build/badge.svg?branch=main)
